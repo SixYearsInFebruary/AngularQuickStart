@@ -1,3 +1,7 @@
+<!-- There are three noteworthy sections of HTML -->
+<!-- 1. The Javascript libraries -->
+<!-- 2. Comfiguration of SystemJS where we also import and run the main file that we just wrote -->
+<!-- 3. The <my-app> tag in the body which is where our app lives! -->
 <html>
   <head>
     <title>Angular 2 QuickStart</title>
@@ -14,6 +18,9 @@
     <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
     <!-- 2. Configure SystemJS -->
     <script>
+      // The packages node tells SystemJs what to do when it sees a request for a module from the app/ folder.
+      // The System.import call tells SystemJS to import the main file (main.js ... after transpiling main.ts, remember?). 
+      // main is where we tell Angular to launch the application. We also catch and log launch errors to the console.
       System.config({
         packages: {        
           app: {
